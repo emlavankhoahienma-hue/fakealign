@@ -31,9 +31,11 @@ jobs:
       - name: Package Unsigned IPA
         run: |
           mkdir -p build/Payload
-          cp -R build/fakealign.xcarchive/Products/Applications/fakealign.app build/Payload/
+          APP_PATH=$(find build -name "fakealign.app" -type d | head -n 1)
+          echo "Found app bundle at: $APP_PATH"
+          cp -R "$APP_PATH" build/Payload/
           cd build
-          zip -r fakealign-unsigned.ipa Payload
+          zip -qr fakealign-unsigned.ipa Payload
           cd ..
 
       - name: Upload IPA Artifact

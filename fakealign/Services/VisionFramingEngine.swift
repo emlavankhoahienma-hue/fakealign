@@ -50,7 +50,7 @@ public final class VisionFramingEngine: ObservableObject {
 
             // Convert UI normalized coordinates (top-left) to Vision coordinates (bottom-left)
             let visionRect = self.uiRectToVisionRect(boundingBox)
-            let trackObs = VCObjectTrackerObservation(boundingBox: visionRect)
+            let trackObs = VNDetectedObjectObservation(boundingBox: visionRect)
             let request = VNTrackObjectRequest(detectedObjectObservation: trackObs)
             request.trackingLevel = .accurate
 
@@ -266,7 +266,7 @@ public final class VisionFramingEngine: ObservableObject {
 
     private func reinitializeTracking(pixelBuffer: CVPixelBuffer, boundingBox: CGRect, anchor: CGPoint) {
         let visionBox = uiRectToVisionRect(boundingBox)
-        let obs = VCObjectTrackerObservation(boundingBox: visionBox)
+        let obs = VNDetectedObjectObservation(boundingBox: visionBox)
         let request = VNTrackObjectRequest(detectedObjectObservation: obs)
         request.trackingLevel = .accurate
 

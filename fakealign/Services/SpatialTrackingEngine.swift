@@ -2,6 +2,12 @@ import Foundation
 import simd
 import Combine
 
+extension simd_quatd {
+    public func act(_ v: simd_double3) -> simd_double3 {
+        return simd_act(self, v)
+    }
+}
+
 /// Measurement classification for adaptive Kalman filtering
 public enum SpatialMeasurementType {
     case confirmedContinuation // High confidence optical tracking continuation

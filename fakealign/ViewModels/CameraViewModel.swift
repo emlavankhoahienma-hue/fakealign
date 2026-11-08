@@ -5,6 +5,7 @@ import CoreMedia
 import Combine
 import UIKit
 import simd
+import QuartzCore
 
 public enum AISessionState: Equatable {
     case idle
