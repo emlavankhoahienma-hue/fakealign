@@ -121,7 +121,7 @@ public final class CameraViewModel: ObservableObject {
         // Viewfinder Latency Compensation & 3D Ray Projection
         // Latency lead: live preview time = sample timestamp - 8ms
         let livePreviewTime = timestamp - 0.008
-        var qx: Double = 0, qy: Double = 0, qz: Double = 0, qw: 1.0
+        var qx: Double = 0, qy: Double = 0, qz: Double = 0, qw: Double = 1.0
         let hasPose = ntc_imu_interpolate_pose(livePreviewTime, &qx, &qy, &qz, &qw)
 
         let cameraAttitude = hasPose ? simd_quatd(real: qw, imag: simd_double3(qx, qy, qz)) : simd_quatd(real: 1.0, imag: simd_double3(0, 0, 0))
@@ -146,7 +146,7 @@ public final class CameraViewModel: ObservableObject {
         guard let subject = subject, spatialEngine.isTrackingActive else { return }
 
         // Compute optical bearing ray of tracked real object
-        var qx: Double = 0, qy: Double = 0, qz: Double = 0, qw: 1.0
+        var qx: Double = 0, qy: Double = 0, qz: Double = 0, qw: Double = 1.0
         _ = ntc_imu_interpolate_pose(CACurrentMediaTime(), &qx, &qy, &qz, &qw)
         let attitude = simd_quatd(real: qw, imag: simd_double3(qx, qy, qz))
 
@@ -170,7 +170,7 @@ public final class CameraViewModel: ObservableObject {
     public func pinTargetAndStartMotion(target: CGPoint, subjectRect: CGRect, trackedPoint: CGPoint, type: TrackedSubjectType = .foregroundObject) {
         guard let pixelBuffer = lastSamplePixelBuffer else { return }
 
-        var qx: Double = 0, qy: Double = 0, qz: Double = 0, qw: 1.0
+        var qx: Double = 0, qy: Double = 0, qz: Double = 0, qw: Double = 1.0
         let now = CACurrentMediaTime()
         _ = ntc_imu_interpolate_pose(now, &qx, &qy, &qz, &qw)
         let attitude = simd_quatd(real: qw, imag: simd_double3(qx, qy, qz))
