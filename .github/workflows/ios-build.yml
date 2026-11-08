@@ -1,0 +1,44 @@
+name: iOS Sideload Build & Release
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-unsigned-ipa:
+    runs-on: macos-14
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_15.4.app
+
+      - name: Build Archive (Unsigned)
+        run: |
+          xcodebuild archive \
+            -project fakealign.xcodeproj \
+            -scheme fakealign \
+            -configuration Release \
+            -archivePath build/fakealign.xcarchive \
+            -destination "generic/platform=iOS" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            AD_HOC_CODE_SIGNING_ALLOWED=YES
+
+      - name: Package Unsigned IPA
+        run: |
+          mkdir -p build/Payload
+          cp -R build/fakealign.xcarchive/Products/Applications/fakealign.app build/Payload/
+          cd build
+          zip -r fakealign-unsigned.ipa Payload
+          cd ..
+
+      - name: Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fakealign-unsigned-ipa
+          path: build/fakealign-unsigned.ipa
+          retention-days: 14

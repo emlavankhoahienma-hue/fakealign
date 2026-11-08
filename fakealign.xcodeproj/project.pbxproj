@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA00000129B7F10000000201 /* FakeAlignApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000129B7F10000000101 /* FakeAlignApp.swift */; };
+		AA00000129B7F10000000202 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000129B7F10000000102 /* ContentView.swift */; };
+		AA00000129B7F10000000203 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000129B7F10000000103 /* CameraPreviewView.swift */; };
+		AA00000129B7F10000000204 /* ARFramingOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000129B7F10000000104 /* ARFramingOverlayView.swift */; };
+		AA00000129B7F10000000205 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000129B7F10000000105 /* CameraViewModel.swift */; };
+		AA00000129B7F10000000206 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000129B7F10000000106 /* CameraService.swift */; };
+		AA00000129B7F10000000207 /* DeviceMotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000129B7F10000000107 /* DeviceMotionService.swift */; };
+		AA00000129B7F10000000208 /* SpatialTrackingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000129B7F10000000108 /* SpatialTrackingEngine.swift */; };
+		AA00000129B7F10000000209 /* VisionFramingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000129B7F10000000109 /* VisionFramingEngine.swift */; };
+		AA00000129B7F1000000020A /* CompositionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000129B7F1000000010A /* CompositionCalculator.swift */; };
+		AA00000129B7F1000000020B /* NativeTrackingCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA00000129B7F1000000010B /* NativeTrackingCore.cpp */; };
+		AA00000129B7F1000000020D /* TargetPatchFlowShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = AA00000129B7F1000000010D /* TargetPatchFlowShaders.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA00000129B7F10000000006 /* fakealign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fakealign.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA00000129B7F10000000101 /* FakeAlignApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAlignApp.swift; sourceTree = "<group>"; };
+		AA00000129B7F10000000102 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA00000129B7F10000000103 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		AA00000129B7F10000000104 /* ARFramingOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFramingOverlayView.swift; sourceTree = "<group>"; };
+		AA00000129B7F10000000105 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		AA00000129B7F10000000106 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		AA00000129B7F10000000107 /* DeviceMotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionService.swift; sourceTree = "<group>"; };
+		AA00000129B7F10000000108 /* SpatialTrackingEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialTrackingEngine.swift; sourceTree = "<group>"; };
+		AA00000129B7F10000000109 /* VisionFramingEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionFramingEngine.swift; sourceTree = "<group>"; };
+		AA00000129B7F1000000010A /* CompositionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionCalculator.swift; sourceTree = "<group>"; };
+		AA00000129B7F1000000010B /* NativeTrackingCore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NativeTrackingCore.cpp; sourceTree = "<group>"; };
+		AA00000129B7F1000000010C /* NativeTrackingCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeTrackingCore.h; sourceTree = "<group>"; };
+		AA00000129B7F1000000010D /* TargetPatchFlowShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TargetPatchFlowShaders.metal; sourceTree = "<group>"; };
+		AA00000129B7F1000000010E /* fakealign-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fakealign-Bridging-Header.h"; sourceTree = "<group>"; };
+		AA00000129B7F1000000010F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA00000129B7F10000000011 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA00000129B7F10000000003 = {
+			isa = PBXGroup;
+			children = (
+				AA00000129B7F10000000004 /* fakealign */,
+				AA00000129B7F10000000005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA00000129B7F10000000004 /* fakealign */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000129B7F10000000030 /* App */,
+				AA00000129B7F10000000031 /* Views */,
+				AA00000129B7F10000000032 /* ViewModels */,
+				AA00000129B7F10000000033 /* Services */,
+				AA00000129B7F10000000034 /* Shaders */,
+				AA00000129B7F1000000010E /* fakealign-Bridging-Header.h */,
+				AA00000129B7F1000000010F /* Info.plist */,
+			);
+			path = fakealign;
+			sourceTree = "<group>";
+		};
+		AA00000129B7F10000000005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000129B7F10000000006 /* fakealign.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA00000129B7F10000000030 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000129B7F10000000101 /* FakeAlignApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AA00000129B7F10000000031 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000129B7F10000000102 /* ContentView.swift */,
+				AA00000129B7F10000000103 /* CameraPreviewView.swift */,
+				AA00000129B7F10000000104 /* ARFramingOverlayView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA00000129B7F10000000032 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000129B7F10000000105 /* CameraViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AA00000129B7F10000000033 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000129B7F10000000106 /* CameraService.swift */,
+				AA00000129B7F10000000107 /* DeviceMotionService.swift */,
+				AA00000129B7F10000000108 /* SpatialTrackingEngine.swift */,
+				AA00000129B7F10000000109 /* VisionFramingEngine.swift */,
+				AA00000129B7F1000000010A /* CompositionCalculator.swift */,
+				AA00000129B7F1000000010B /* NativeTrackingCore.cpp */,
+				AA00000129B7F1000000010C /* NativeTrackingCore.h */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AA00000129B7F10000000034 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				AA00000129B7F1000000010D /* TargetPatchFlowShaders.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA00000129B7F10000000001 /* fakealign */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA00000129B7F10000000021 /* Build configuration list for PBXNativeTarget "fakealign" */;
+			buildPhases = (
+				AA00000129B7F10000000010 /* Sources */,
+				AA00000129B7F10000000011 /* Frameworks */,
+				AA00000129B7F10000000012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fakealign;
+			productName = fakealign;
+			productReference = AA00000129B7F10000000006 /* fakealign.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA00000129B7F10000000002 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AA00000129B7F10000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AA00000129B7F10000000020 /* Build configuration list for PBXProject "fakealign" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA00000129B7F10000000003;
+			productRefGroup = AA00000129B7F10000000005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA00000129B7F10000000001 /* fakealign */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA00000129B7F10000000012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA00000129B7F10000000010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA00000129B7F10000000201 /* FakeAlignApp.swift in Sources */,
+				AA00000129B7F10000000202 /* ContentView.swift in Sources */,
+				AA00000129B7F10000000203 /* CameraPreviewView.swift in Sources */,
+				AA00000129B7F10000000204 /* ARFramingOverlayView.swift in Sources */,
+				AA00000129B7F10000000205 /* CameraViewModel.swift in Sources */,
+				AA00000129B7F10000000206 /* CameraService.swift in Sources */,
+				AA00000129B7F10000000207 /* DeviceMotionService.swift in Sources */,
+				AA00000129B7F10000000208 /* SpatialTrackingEngine.swift in Sources */,
+				AA00000129B7F10000000209 /* VisionFramingEngine.swift in Sources */,
+				AA00000129B7F1000000020A /* CompositionCalculator.swift in Sources */,
+				AA00000129B7F1000000020B /* NativeTrackingCore.cpp in Sources */,
+				AA00000129B7F1000000020D /* TargetPatchFlowShaders.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA00000129B7F10000000022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA00000129B7F10000000023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA00000129B7F10000000024 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = fakealign/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fakealign.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "fakealign/fakealign-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Debug;
+		};
+		AA00000129B7F10000000025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = fakealign/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fakealign.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "fakealign/fakealign-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA00000129B7F10000000020 /* Build configuration list for PBXProject "fakealign" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA00000129B7F10000000022 /* Debug */,
+				AA00000129B7F10000000023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA00000129B7F10000000021 /* Build configuration list for PBXNativeTarget "fakealign" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA00000129B7F10000000024 /* Debug */,
+				AA00000129B7F10000000025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = AA00000129B7F10000000002 /* Project object */;
+}
